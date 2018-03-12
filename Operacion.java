@@ -1,12 +1,12 @@
 
 /**
- * Enumeration class Operacion - write a description of the enum class here
+ * Enumeracion de las Clases de Operaciones
  * 
- * @author (your name here)
- * @version (version number or date here)
+ * @author (Oscar Maso)
+ * @version (Final Versión)
  */
 public enum Operacion
 {
-    SUMA,RESTA,MULTIPLICA,DIVIDE
-
+    // LLamada a los siguientes OPERA (archivo Calculadora).
+SUMA,RESTA,MULTIPLICA,DIVIDE,RAICES,POTENCIAS,LOGARITMOS,FACTORIALES
 }
