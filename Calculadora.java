@@ -119,7 +119,8 @@ public class Calculadora
         //Resultado Factoriales.
         return rdo;
     }
-    /*public void muestraTodosResultados(){
+    public void muestraTodosResultados(){
+    // Impresión De las soluciones a los casos 
         System.out.println("Num1="+Double.toString(num1)+" Num2=" + Double.toString(num2));
         System.out.println("Suma :" + Double.toString(num1+num2));
         System.out.println("Resta :"+ Double.toString(num1-num2));
@@ -129,6 +130,6 @@ public class Calculadora
         System.out.println("Potencia:" +Integer.toString(base,exp));
         System.out.println("Logaritmo : " +Double.toString(Math.log10(num1)));
         System.out.println("Factorial:" +Integer.toString(factorial));
-    }*/
+    }
 }
 
