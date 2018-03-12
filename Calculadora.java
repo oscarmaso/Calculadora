@@ -19,7 +19,7 @@ public class Calculadora
     private int rdo;            //Resultado del factorial (int)
     private Operacion op;       //Asociacion de el enum (Archivo Operacion)
     private int indice;
-    /**
+    /*
      * Constructor para objetos de clase Calculadora
      */
     public Calculadora()
