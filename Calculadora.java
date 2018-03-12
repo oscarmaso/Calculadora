@@ -1,10 +1,10 @@
 
 /*
  * Calculadora de 2 numeros con las funciones de:
- *      Suma        -   Resta
- *      Multiplica  -   Divide
- *      Raices      -   Logaritmos
- *      Factoriales -   Potencias
+ *      Suma            -       Resta
+ *      Multiplica      -       Divide
+ *      Raices          -       Logaritmos
+ *      Factoriales     -       Potencias
  *      
  * @author (Oscar Maso)
  * @version (Calculadora Final)
