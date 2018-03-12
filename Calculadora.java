@@ -121,15 +121,15 @@ public class Calculadora
     }
     public void muestraTodosResultados(){
     // Impresión De las soluciones a los casos 
-        System.out.println("Num1="+Double.toString(num1)+" Num2=" + Double.toString(num2));
-        System.out.println("Suma :" + Double.toString(num1+num2));
-        System.out.println("Resta :"+ Double.toString(num1-num2));
-        System.out.println("Multiplica :" + Double.toString(num1*num2));
-        System.out.println("Divide :"+ Double.toString(num1/num2));
-        System.out.println("Raiz:"+Integer.toString(num1,1/num2));
-        System.out.println("Potencia:" +Integer.toString(base,exp));
-        System.out.println("Logaritmo : " +Double.toString(Math.log10(num1)));
-        System.out.println("Factorial:" +Integer.toString(factorial));
+        System.out.println("Num1=" + Double.toString(num1)+" Num2=" + Double.toString(num2));
+        System.out.println("Suma:" + Double.toString(num1+num2));
+        System.out.println("Resta :" + Double.toString(num1-num2));
+        System.out.println("Multiplica:" + Double.toString(num1*num2));
+        System.out.println("Divide:" + Double.toString(num1/num2));
+        System.out.println("Raiz:" + Integer.toString(num1,1/num2));
+        System.out.println("Potencia:" + Integer.toString(base,exp));
+        System.out.println("Logaritmo:" + Double.toString(Math.log10(num1)));
+        System.out.println("Factorial:" + Integer.toString(factorial));
     }
 }
 
