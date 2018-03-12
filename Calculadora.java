@@ -1,5 +1,5 @@
 
-/**
+/*
  * Calculadora de 2 numeros con las funciones de:
  *      Suma        -   Resta
  *      Multiplica  -   Divide
