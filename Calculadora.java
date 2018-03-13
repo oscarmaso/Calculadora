@@ -83,28 +83,35 @@ public class Calculadora
     }
     public void ponOperacion(String opera){
         switch(opera){
-
+    //Operacion SUMA
             case "SUMA":
                 op=op.SUMA;
                 break;
+    //Operacion RESTA
             case "RESTA":
                 op=op.RESTA;
                 break;
+    //Operacion MULTIPLICA
             case "MULTIPLICA":
                 op=op.MULTIPLICA;
                 break;
+    //Operacion DIVIDE
             case "DIVIDE":
                 op=op.DIVIDE;
                 break;
+    //Operacion RAICES
             case "RAICES":
                 op=op.RAICES;
                 break;
+    //Operacion POTENCIAS
             case "POTENCIAS":
                 op=op.POTENCIAS;
                 break;
+    //Operacion LOGARITMOS
             case "LOGARITMOS":
                 op=op.LOGARITMOS;
                 break;
+    //Operaciones FACTORIALES
             case "FACTORIALES":
                 op=op.FACTORIALES;
                 break;
@@ -120,6 +127,7 @@ public class Calculadora
         return rdo;
     }
     public void muestraTodosResultados(){
+    // Datos utilizados solo para las pruebas
     // Impresión De las soluciones a los casos 
         System.out.println("Num1=" + Double.toString(num1)+" Num2=" + Double.toString(num2));
         System.out.println("Suma:" + Double.toString(num1+num2));
