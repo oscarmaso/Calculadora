@@ -134,21 +134,24 @@ public CalculadoraTest()
         calculadora.opera();
         assertEquals(-6, calculadora.resultadoReal(),0.1);
         
-        //Caso 5 resta al poner el valor limite positivo menos el negativo da infinto
+        // Caso 5: 
+        // Resta al poner el valor limite positivo menos el negativo da infinto
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-       //Caso 6 resta poner valor limite  negativo menos el positivo es igual a menos infinito
+        //Caso 6:
+        // Resta poner valor limite  negativo menos el positivo es igual a menos infinito
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
         calculadora.opera();
         assertEquals(Double.NEGATIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 7 resta poner los valores limites negativos espera un 0 porque - -(-) = -+
+        // Caso 7:
+        // Resta poner los valores limites negativos espera un 0 porque - -(-) = -+
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
@@ -157,49 +160,56 @@ public CalculadoraTest()
     }
 @Test
     public void multiplicacion(){
-        //Caso 1 multiplicacion dos numeros reales
+        // Caso 1:
+        // Multiplicacion dos numeros reales
         calculadora.ponNum1(3.1); // Pedida Numero 1
         calculadora.ponNum2(5);   // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(15.5, calculadora.resultadoReal(),0.1);
         
-        //Caso 2 multiplicacion dos numeros reales invertidos y no cambia el resultado
+        // Caso 2:
+        // Multiplicacion dos numeros reales invertidos y no cambia el resultado
         calculadora.ponNum1(6);     // Pedida Numero 1
         calculadora.ponNum2(3.2);   // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(19.2, calculadora.resultadoReal(),0.1);
         
-        //Caso 3 multiplicacion por 0
+        // Caso 3:
+        // Multiplicacion por 0
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(9); // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(0, calculadora.resultadoReal(),0.1);
         
-        //Caso 4 multiplicacion por 0 invirtiendo valores y no cambia
+        // Caso 4: 
+        // Multiplicacion por 0 invirtiendo valores y no cambia
         calculadora.ponNum1(4); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(0, calculadora.resultadoReal(),0.1);
         
-        //Caso 5 multiplicacion limite positivo por limite positivo espera infinito
+        // Caso 5:
+        // Multiplicacion limite positivo por limite positivo espera infinito
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 6 multiplicacion limite negativo por limite positivo espera menos infinito
+        // Caso 6:
+        // Multiplicacion limite negativo por limite positivo espera menos infinito
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
         calculadora.opera();
         assertEquals(Double.NEGATIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 7 multiplicacion limite negativo por limite negativo espera
+        // Caso 7:
+        // Multiplicacion limite negativo por limite negativo espera
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("MULTIPLICA"); //Invocamos la operacion MULTIPLICACION
@@ -208,70 +218,80 @@ public CalculadoraTest()
     }
 @Test
     public void division(){
-        //Caso 1 division entre dos reales
+        // Caso 1:
+        // Division entre dos reales
         calculadora.ponNum1(6); // Pedida Numero 1
         calculadora.ponNum2(2); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(3, calculadora.resultadoReal(),0.1);
         
-        //Caso 2 division dos reales invertidos
+        // Caso 2:
+        // Division dos reales invertidos
         calculadora.ponNum1(5); // Pedida Numero 1
         calculadora.ponNum2(8); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(0.6, calculadora.resultadoReal(),0.1);
         
-        //Caso 3 division 0 entre un divisor distinto a 0 espera 5
+        // Caso 3: 
+        // Division 0 entre un divisor distinto a 0 espera 5
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(7); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(0, calculadora.resultadoReal(),0.1);
         
-        //Caso 4 division numero real entre 0 espera infinito
+        // Caso 4: 
+        // Division numero real entre 0 espera infinito
         calculadora.ponNum1(7); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-       //Caso 5 division espera un 0
+        // Caso 5:
+        // Division espera un 0
         calculadora.ponNum1(0);                 // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(0, calculadora.resultadoReal(),0.1);
         
-       //Caso 6 division espera uno ya que se dividen dos valores iguales
+        // Caso 6:
+        // Division espera uno ya que se dividen dos valores iguales
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(1.0, calculadora.resultadoReal(),0.1);
         
-        //Caso 7 division se divide 0 entre 0 y no sale numero
+        // Caso 7:
+        // Division se divide 0 entre 0 y no sale numero
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(Double.NaN, calculadora.resultadoReal(),0.1);
         
-        //Caso 8 division negativo entre 0
+        // Caso 8:
+        // Division negativo entre 0
         calculadora.ponNum1(-); // Pedida Numero 1
         calculadora.ponNum2(0);  // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(Double.NEGATIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        // Caso 9 division limite positivo entre limite negativo
+        // Caso 9:
+        // Division limite positivo entre limite negativo
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
         calculadora.opera();
         assertEquals(-1.0, calculadora.resultadoReal(),0.1);
         
-        //Caso 10 division limite negativo entre limite negativo
+        // Caso 10: 
+        // Division limite negativo entre limite negativo
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("DIVIDE"); //Invocamos la operacion DIVISION
@@ -280,56 +300,64 @@ public CalculadoraTest()
     }
 @Test
     public void raices(){
-        //Caso 1 raices la raiz cuadrada de 8 es 2.8.
+        // Caso 1:
+        // Raices la raiz cuadrada de 8 es 2.8.
         calculadora.ponNum1(8); // Pedida Numero 1
         calculadora.ponNum2(2); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(2.8,calculadora.resultadoReal(),0.1);
         
-        //Caso 2 raices espera un nan porque la funcion no deja raices negativas.
+        // Caso 2:
+        // Raices espera un nan porque la funcion no deja raices negativas.
         calculadora.ponNum1(-32); // Pedida Numero 1
         calculadora.ponNum2(5);   // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(Double.NaN,calculadora.resultadoReal(),0.1);
         
-        //caso3 raices la raiz cubica de 7 es 2.64.
+        // Caso 3: 
+        // Raices la raiz cubica de 7 es 2.64.
         calculadora.ponNum1(7); // Pedida Numero 1
         calculadora.ponNum2(3); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(1.709,calculadora.resultadoReal(),0.1);
         
-        //caso 4 raices la raiz cuadrada de 0 es 0.
+        // Caso 4: 
+        // Raices la raiz cuadrada de 0 es 0.
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(2); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);
         
-        //caso 5 raices espera un 1.
+        // Caso 5
+        // Raices espera un 1.
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(1.0,calculadora.resultadoReal(),0.1);
         
-        //caso 6 raices espera un nan porque la funcion no deja raices negativas.
+        // Caso 6:
+        // Raices espera un nan porque la funcion no deja raices negativas.
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(Double.NaN,calculadora.resultadoReal(),0.1);
         
-        //caso 7 raices infinito porque 2 elevado a 1 entre 0(es infinito).
+        // Caso 7:
+        // Raices infinito porque 2 elevado a 1 entre 0(es infinito).
         calculadora.ponNum1(2); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY,calculadora.resultadoReal(),0.1);
         
-         //caso 8 raices espara un 1.
+        // Caso 8: 
+        // Raices espara un 1.
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("RAICES"); //Invocamos la operacion RAICES
@@ -341,28 +369,32 @@ public CalculadoraTest()
     }
 @Test
     public void potencias(){
-        //Caso 1 potencias numero positivo elevado al cuadrado
+        // Caso 1:
+        // Potencias numero positivo elevado al cuadrado
         calculadora.ponNum1(4); // Pedida Numero 1
         calculadora.ponNum2(2); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(16.0,calculadora.resultadoReal(),0.1);
         
-        //Caso 2 numero positivo elevado a 0 igual a 1
+        // Caso 2:
+        // Numero positivo elevado a 0 igual a 1
         calculadora.ponNum1(2); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(1.0,calculadora.resultadoReal(),0.1);
         
-        //Caso 3 potencias 0 elevado a 4 0
+        // Caso 3:
+        // Potencias 0 elevado a 4 0
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(4); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);
         
-        // Caso 4 potencias limite postivo elevado a limite positivo igual a infinito
+        // Caso 4
+        // Potencias limite postivo elevado a limite positivo igual a infinito
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
