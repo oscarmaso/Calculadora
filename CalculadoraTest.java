@@ -44,49 +44,56 @@ public CalculadoraTest()
     }
 @Test
     public void suma(){
-            //Caso 1 suma probamos con dos numeros reales positivos
+        // Caso 1:
+        // Suma con dos numeros reales positivos
         calculadora.ponNum1(4); // Pedida Numero 1
         calculadora.ponNum2(3); // Pedida Numero 2
         calculadora.ponOperacion("SUMA");
         calculadora.opera();
         assertEquals(7, calculadora.resultadoReal(),0.1);
         
-        //Caso 2 suma con dos numeros reales negativos
+        // Caso 2: 
+        // Suma con dos numeros reales negativos
         calculadora.ponNum1(-4); // Pedida Numero 1
         calculadora.ponNum2(-5); // Pedida Numero 2
         calculadora.ponOperacion("SUMA");
         calculadora.opera();
         assertEquals(-9, calculadora.resultadoReal(),0.1);
         
-        //Caso 3 suma probamos el 0 como segundo operando
+        // Caso 3:
+        // Suma con el 0 como segundo operando
         calculadora.ponNum1(3.4);  // Pedida Numero 1
         calculadora.ponNum2(0);    // Pedida Numero 2
         calculadora.ponOperacion("SUMA"); //Invocamos la operacion SUMA
         calculadora.opera();
         assertEquals(3.4, calculadora.resultadoReal(),0.1);
         
-        //Caso 4 suma probamos con el 0 la propiedad conmutativa si se cumple
+        // Caso 4: 
+        // Suma con el 0 la propiedad conmutativa
         calculadora.ponNum1(0);    // Pedida Numero 1
         calculadora.ponNum2(2.4);  // Pedida Numero 2
         calculadora.ponOperacion("SUMA"); //Invocamos la operacion SUMA
         calculadora.opera();
         assertEquals(2.4, calculadora.resultadoReal(),0.1);
         
-        //Caso 5 suma ponemos los valores limite positivos del double y da infinito como resultado
+        // Caso 5: 
+        // Suma con los valores limite positivos del double
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
         calculadora.ponOperacion("SUMA"); //Invocamos la operacion SUMA
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 6 suma ponemos los valores limite negativos del double y da menos infinito como resultado
+        // Caso 6: 
+        // Suma ponemos los valores limite negativos del double
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("SUMA"); //Invocamos la operacion SUMA
         calculadora.opera();
         assertEquals(Double.NEGATIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 7 ponemos los valores limite positivos y negativos y espera un 0
+        // Caso 7:
+        // Suma con los valores limite positivos y negativos
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("SUMA"); //Invocamos la operacion SUMA
@@ -95,28 +102,32 @@ public CalculadoraTest()
     }
 @Test
     public void resta(){
-        //Caso 1 resta ponemos dos numeros reales y el resultado sale negativo
+        // Caso 1:
+        // Resta ponemos dos numeros reales 
         calculadora.ponNum1(1.2);    // Pedida Numero 1
         calculadora.ponNum2(5);      // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
         calculadora.opera();
         assertEquals(-3.8, calculadora.resultadoReal(),0.1);
         
-        //Caso 2 resta probamos que al cambiar los operandos el resultado es distinto (positivo)
+        // Caso 2:
+        // Resta probamos que al cambiar los operandos
         calculadora.ponNum1(8);     // Pedida Numero 1
         calculadora.ponNum2(7.2);   // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
         calculadora.opera();
         assertEquals(0.8, calculadora.resultadoReal(),0.1);
         
-        //Caso 3 resta probamos el 0 que no modifica el valor del primer numero
+        // Caso 3:
+        // Resta probamos el 0 de segundo numero
         calculadora.ponNum1(6); // Pedida Numero 1
         calculadora.ponNum2(0); // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
         calculadora.opera();
         assertEquals(6, calculadora.resultadoReal(),0.1);
         
-        //Caso 4 resta probamos que al cambiar el 0 por el 4 cambia el resultado
+        // Caso 4: 
+        // Resta probamos que al cambiar el 0 por el 4 cambia el resultado
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponNum2(6); // Pedida Numero 2
         calculadora.ponOperacion("RESTA"); //Invocamos la operacion RESTA
