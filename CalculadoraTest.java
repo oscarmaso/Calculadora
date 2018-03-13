@@ -43,7 +43,7 @@ public CalculadoraTest()
     {
     }
 @Test
-    public void suma(){
+    public void PruebaSuma(){
         // Caso 1:
         // Suma con dos numeros reales positivos
         calculadora.ponNum1(4); // Pedida Numero 1
@@ -101,7 +101,7 @@ public CalculadoraTest()
         assertEquals(0, calculadora.resultadoReal(),0.1);  
     }
 @Test
-    public void resta(){
+    public void Pruebaresta(){
         // Caso 1:
         // Resta ponemos dos numeros reales 
         calculadora.ponNum1(1.2);    // Pedida Numero 1
@@ -142,7 +142,7 @@ public CalculadoraTest()
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
         
-        //Caso 6:
+        // Caso 6:
         // Resta poner valor limite  negativo menos el positivo es igual a menos infinito
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
@@ -159,7 +159,7 @@ public CalculadoraTest()
         assertEquals(0, calculadora.resultadoReal(),0.1);
     }
 @Test
-    public void multiplicacion(){
+    public void Pruebamultiplicacion(){
         // Caso 1:
         // Multiplicacion dos numeros reales
         calculadora.ponNum1(3.1); // Pedida Numero 1
@@ -217,7 +217,7 @@ public CalculadoraTest()
         assertEquals(Double.POSITIVE_INFINITY, calculadora.resultadoReal(),0.1);
     }
 @Test
-    public void division(){
+    public void Pruebadivision(){
         // Caso 1:
         // Division entre dos reales
         calculadora.ponNum1(6); // Pedida Numero 1
@@ -299,7 +299,7 @@ public CalculadoraTest()
         assertEquals(1, calculadora.resultadoReal(),0.1);
     }
 @Test
-    public void raices(){
+    public void Pruebaraices(){
         // Caso 1:
         // Raices la raiz cuadrada de 8 es 2.8.
         calculadora.ponNum1(8); // Pedida Numero 1
@@ -368,7 +368,7 @@ public CalculadoraTest()
         
     }
 @Test
-    public void potencias(){
+    public void Pruebapotencias(){
         // Caso 1:
         // Potencias numero positivo elevado al cuadrado
         calculadora.ponNum1(4); // Pedida Numero 1
@@ -442,7 +442,7 @@ public CalculadoraTest()
         assertEquals(-0.125,calculadora.resultadoReal(),0.1);
     }
 @Test
-    public void logaritmos(){
+    public void Pruebalogaritmos(){
         // Caso 1:
         // Logaritmos logartimo de 10 da 1 ya que 10 entre 10 1.
         calculadora.ponNum1(10); // Pedida Numero 1
@@ -487,7 +487,7 @@ public CalculadoraTest()
 
     }
 @Test
-    public void factoriales(){
+    public void Pruebafactoriales(){
         // Caso 1:
         // Factoriales da 24 porque 4 * 3 * 2 * 1
         calculadora.PonFactorial(4);
