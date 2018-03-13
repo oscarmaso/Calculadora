@@ -393,7 +393,7 @@ public CalculadoraTest()
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);
         
-        // Caso 4
+        // Caso 4:
         // Potencias limite postivo elevado a limite positivo igual a infinito
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE); // Pedida Numero 2
@@ -401,35 +401,40 @@ public CalculadoraTest()
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY,calculadora.resultadoReal(),0.1);
         
-        //Caso 5 potencias limite negativo elevado a otro negativo igual menos infinito
+        // Caso 5:
+        // Potencias limite negativo elevado a otro negativo igual menos infinito
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);
         
-        //Caso 6 potencias limite negativo elevado a otro positvo igual a infinito
+        // Caso 6:
+        // Potencias limite negativo elevado a otro positvo igual a infinito
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponNum2(Double.MAX_VALUE);  // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(Double.POSITIVE_INFINITY,calculadora.resultadoReal(),0.1);
         
-        //Caso 7 potencias limite positivo elevado a negativo igual a 0
+        // Caso 7:
+        // Potencias limite positivo elevado a negativo igual a 0
         calculadora.ponNum1(Double.MAX_VALUE);  // Pedida Numero 1
         calculadora.ponNum2(-Double.MAX_VALUE); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);
         
-        //Caso 8 potencias numero positivo elevado a exponente negativo es igual a elevado 1/3 da 0.125
+        // Caso 8: 
+        // Potencias numero positivo elevado a exponente negativo es igual a elevado 1/3 da 0.125
         calculadora.ponNum1(2);  // Pedida Numero 1
         calculadora.ponNum2(-3); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
         calculadora.opera();
         assertEquals(0.125,calculadora.resultadoReal(),0.1);
         
-        //Caso 9 potencias numero negativo elevado a exp negativo igual a -0.125
+        // Caso 9:
+        // Potencias numero negativo elevado a exp negativo igual a -0.125
         calculadora.ponNum1(-2); // Pedida Numero 1
         calculadora.ponNum2(-3); // Pedida Numero 2
         calculadora.ponOperacion("POTENCIAS"); //Invocamos la operacion POTENCIAS
@@ -438,37 +443,43 @@ public CalculadoraTest()
     }
 @Test
     public void logaritmos(){
-        //Caso 1 logaritmos logartimo de 10 da 1 ya que 10 entre 10 1.
+        // Caso 1:
+        // Logaritmos logartimo de 10 da 1 ya que 10 entre 10 1.
         calculadora.ponNum1(10); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
         assertEquals(1.0,calculadora.resultadoReal(),0.1);
         
-          //Caso 2 logaritmos metemos el 1 y nos sale un cero.
+        // Caso 2:
+        // Logaritmos metemos el 1 y nos sale un cero.
         calculadora.ponNum1(1); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
         assertEquals(0,calculadora.resultadoReal(),0.1);v
         
-          //Caso 3 logaritmos logaritmo de un decimal y nos sale un numero decimal que empieza por 0.
+        // Caso 3:
+        // Logaritmos logaritmo de un decimal y nos sale un numero decimal que empieza por 0.
         calculadora.ponNum1(2.3); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
         assertEquals(0.361727836,calculadora.resultadoReal(),0.1);
         
-         //Caso 4 logaritmos da ese resulatdo ya que es un limite positivo.
+        // Caso 4:
+        // Logaritmos da ese resulatdo ya que es un limite positivo.
         calculadora.ponNum1(Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
         assertEquals(308.25471555991675,calculadora.resultadoReal(),0.1);
         
-          //Caso 5 logaritmos los logaritmos negativos no existen por lo que hay poner double NaN.
+        // Caso 5:
+        // Logaritmos los logaritmos negativos no existen por lo que hay poner double NaN.
         calculadora.ponNum1(-Double.MAX_VALUE); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
         assertEquals(Double.NaN,calculadora.resultadoReal(),0.1);
         
-          //Caso 6 logaritmos menos infinito ya que es una indterminacion.
+        // Caso 6:
+        // Logaritmos menos infinito ya que es una indterminacion.
         calculadora.ponNum1(0); // Pedida Numero 1
         calculadora.ponOperacion("LOGARITMOS"); //Invocamos la operacion LOGARITMOS
         calculadora.opera();
@@ -477,31 +488,36 @@ public CalculadoraTest()
     }
 @Test
     public void factoriales(){
-        //Caso 1 factoriales da 24 porque 4 * 3 * 2 * 1
+        // Caso 1:
+        // Factoriales da 24 porque 4 * 3 * 2 * 1
         calculadora.PonFactorial(4);
         calculadora.ponOperacion("FACTORIALES"); //Invocamos la operacion FACTORIALES
         calculadora.opera();
         assertEquals(24,calculadora.resultado());
         
-        //Caso 2 factoriales da 0 
+        // Caso 2:
+        // Factoriales da 0 
         calculadora.PonFactorial(0);
         calculadora.ponOperacion("FACTORIALES"); //Invocamos la operacion FACTORIALES
         calculadora.opera();
         assertEquals(0,calculadora.resultado());
         
-        //Caso 3 factoriales maximo valor espera 0
+        // Caso 3:
+        // Factoriales maximo valor espera 0
         calculadora.PonFactorial(Integer.MAX_VALUE);
         calculadora.ponOperacion("FACTORIALES"); //Invocamos la operacion FACTORIALES
         calculadora.opera();
         assertEquals(0,calculadora.resultado());
         
-        //Caso 4 factoriales espera 0 porque no acepta negativos
+        // Caso 4:
+        // Factoriales espera 0 porque no acepta negativos
         calculadora.PonFactorial(-2);
         calculadora.ponOperacion("FACTORIALES"); //Invocamos la operacion FACTORIALES
         calculadora.opera();
         assertEquals(0,calculadora.resultado());
         
-        //Caso 5 factoriales
+        // Caso 5:
+        // Factoriales
         calculadora.PonFactorial(-Integer.MAX_VALUE);
         calculadora.ponOperacion("FACTORIALES"); //Invocamos la operacion FACTORIALES
         calculadora.opera();
